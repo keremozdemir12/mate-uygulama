@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mate Floral uygulaması</title>
+<meta name="description" content="Kahve, tatlı ve çiçek bir arada. Menü, ikram kartı, Çiçek Defteri ve oyunlar Mate Floral uygulamasında.">
+<meta name="theme-color" content="#6C7C58">
+<!-- WhatsApp, Instagram ve iMessage önizlemesi -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uygulama.matefloral.com.tr/">
+<meta property="og:site_name" content="Mate Floral">
+<meta property="og:title" content="Mate Floral uygulaması çıktı">
+<meta property="og:description" content="Kahve, tatlı ve çiçek bir arada. Menü, ikram kartı, Çiçek Defteri ve oyunlar tek uygulamada.">
+<meta property="og:image" content="https://uygulama.matefloral.com.tr/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mate Floral: latte ve pembe güllü buket">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6824839196">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>
+  // Telefondan açılınca doğrudan mağazaya gider; bilgisayarda sayfa görünür.
+  // Android sürümü Google Play'de yayına girince ANDROID_LIVE true yapılır.
+  var APP_STORE = "https://apps.apple.com/tr/app/mate-floral/id6824839196";
+  var PLAY = "https://play.google.com/store/apps/details?id=com.keremozdemir.mate";
+  var ANDROID_LIVE = false;
+  var ua = navigator.userAgent;
+  var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (ios) location.replace(APP_STORE);
+  else if (/Android/.test(ua) && ANDROID_LIVE) location.replace(PLAY);
+</script>
+<style>
+  @font-face { font-family: Clash; src: url(clash.otf); font-display: swap; }
+  :root { --sage: #6C7C58; --cream: #F2EEE3; --forest: #102F08; }
+  * { margin: 0; box-sizing: border-box; }
+  html { background: var(--sage); color: var(--cream); -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100svh; display: grid; place-items: center;
+    padding: max(32px, env(safe-area-inset-top)) 24px max(32px, env(safe-area-inset-bottom));
+    font: 17px/1.5 system-ui, -apple-system, sans-serif;
+  }
+  main > * { min-width: 0; }
+  main { width: min(100%, 880px); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .photos { position: relative; aspect-ratio: 4 / 5; }
+  .photos img { position: absolute; object-fit: cover; border-radius: 22px; box-shadow: 0 24px 60px rgba(16, 47, 8, .35); }
+  .photos .a { top: 0; left: 0; width: 78%; height: 82%; }
+  .photos .b { right: 0; bottom: 0; width: 66%; height: 70%; border: 6px solid var(--sage); border-radius: 26px; }
+  .logo { width: 200px; display: block; }
+  h1 { font: 600 clamp(2rem, 5vw, 2.9rem)/1.05 Clash, system-ui, sans-serif; letter-spacing: -0.015em; margin-top: 36px; }
+  p { margin-top: 16px; opacity: .85; max-width: 32ch; }
+  .stores { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .store {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px;
+    border-radius: 999px; font-weight: 600; text-decoration: none;
+    background: var(--cream); color: var(--forest); transition: transform 100ms ease-out;
+  }
+  .store:active { transform: scale(0.97); }
+  .store.soon { background: transparent; color: var(--cream); border: 1.5px solid rgba(242, 238, 227, .45); cursor: default; }
+  .store svg { width: 20px; height: 20px; fill: currentColor; }
+  .small { margin-top: 28px; font-size: 14px; opacity: .7; }
+  .small a { color: inherit; }
+  @media (max-width: 720px) {
+    main { grid-template-columns: 1fr; gap: 40px; }
+    .photos { width: min(100%, 360px); margin: 0 auto; }
+    .text { text-align: center; }
+    .logo { margin: 0 auto; }
+    p { margin-inline: auto; }
+    .stores { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="photos" aria-hidden="true">
+    <img class="a" src="kahve.jpg" alt="">
+    <img class="b" src="buket.jpg" alt="">
+  </div>
+  <div class="text">
+    <img class="logo" src="logo.svg" alt="Mate Floral">
+    <h1>Kahve, tatlı ve çiçek bir arada</h1>
+    <p>Menüyü gezin, ikram kartınızı ve Çiçek Defterinizi yanınızda taşıyın, oyunlarda haftanın birincisi olun.</p>
+    <div class="stores">
+      <a class="store" id="ios" href="https://apps.apple.com/tr/app/mate-floral/id6824839196">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-4.1zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3z"/></svg>
+        App Store'dan indir
+      </a>
+      <span class="store soon" id="android">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7-9.5-9.7zm10.5 10.7 2.7 2.8-11.7 6.6c-.4.2-.8.3-1.1.2l10.1-9.6zm0-2L4 1.4c.4-.1.8 0 1.1.2l11.7 6.6-2.7 2.8zm3.7 1.6 3 1.7c.8.5.8 1.6 0 2l-3 1.7-3-3 3-2.4z"/></svg>
+        Google Play'de çok yakında
+      </span>
+    </div>
+    <p class="small">Mate Floral &amp; Cafe · Başakşehir · <a href="https://matefloral.com.tr">matefloral.com.tr</a></p>
+  </div>
+</main>
+<script>
+  if (ANDROID_LIVE) {
+    var a = document.getElementById("android");
+    a.outerHTML = '<a class="store" href="' + PLAY + '">' + a.innerHTML.replace("Google Play'de çok yakında", "Google Play'den indir") + "</a>";
+  }
+</script>
+</body>
+</html>
